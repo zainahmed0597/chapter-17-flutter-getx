@@ -5,7 +5,7 @@ Flutter Getx Road Map and what we will learn in this playlist.
 ## Getting Started
 
 - [Playlist: here](https://www.youtube.com/watch?v=0Peij4Wr21A)
-* 
+
 * Creating our Project and adding GetX Packages
 * Get Material App (Why we used Get Material App)
 * GetX as utilities
