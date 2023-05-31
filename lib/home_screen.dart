@@ -13,8 +13,9 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Theme.of(context).primaryColor,
         // backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        backgroundColor: Colors.teal ,
+        // backgroundColor: Colors.teal ,
         title: const Text('GetX'),
         centerTitle: true,
       ),
@@ -59,8 +60,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 Get.bottomSheet(
                   Container(
                    decoration: BoxDecoration(
+                     color: Theme.of(context).primaryColor,
                      // color: Theme.of(context).colorScheme.inversePrimary,
-                     color: Colors.teal,
+                     // color: Colors.teal,
                      borderRadius: BorderRadius.circular(25),
                    ),
                     child: Column(
@@ -80,6 +82,14 @@ class _HomeScreenState extends State<HomeScreen> {
                           },
                           leading: const Icon(Icons.dark_mode),
                           title: const Text('Dark Theme'),
+                        ),
+                        ListTile(
+                          onTap: (){
+                            Get.changeThemeMode(Get.isDarkMode ? ThemeMode.light : ThemeMode.dark);
+                            Get.back();
+                          },
+                          leading: const Icon(Icons.dark_mode),
+                          title: const Text('Change Theme'),
                         ),
                       ],
                     ),

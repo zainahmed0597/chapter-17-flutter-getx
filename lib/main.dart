@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'Theme/themes.dart';
 import 'home_screen.dart';
 
 void main() {
@@ -14,10 +15,12 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'GetX',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
+      theme: Themes().lightTheme,
+      darkTheme:Themes().darkTheme,
+      // theme: ThemeData(
         // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         // useMaterial3: true,
-      ),
+      // ),
       home:  const HomeScreen(),
     );
   }
