@@ -1,3 +1,5 @@
+import 'package:chapter_17_flutter_getx/screen_one.dart';
+import 'package:chapter_17_flutter_getx/screen_two.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'Theme/themes.dart';
@@ -16,13 +18,17 @@ class MyApp extends StatelessWidget {
       title: 'GetX',
       debugShowCheckedModeBanner: false,
       theme: Themes().lightTheme,
-      darkTheme:Themes().darkTheme,
+      darkTheme: Themes().darkTheme,
       // theme: ThemeData(
-        // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        // useMaterial3: true,
+      // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      // useMaterial3: true,
       // ),
-      home:  const HomeScreen(),
+      home: const HomeScreen(),
+      getPages: [
+        GetPage(name: '/', page: () => const HomeScreen()),
+        GetPage(name: '/screenOne', page: () =>  ScreenOne()),
+        GetPage(name: '/screenTwo', page: () => const ScreenTwo()),
+      ],
     );
   }
 }
-

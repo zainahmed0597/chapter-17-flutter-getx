@@ -1,3 +1,4 @@
+import 'package:chapter_17_flutter_getx/screen_one.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -20,7 +21,18 @@ class _HomeScreenState extends State<HomeScreen> {
         centerTitle: true,
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          TextButton(
+            onPressed: () {
+              // Get.to( const ScreenOne(name: "Zain Ahmed",));
+              Get.toNamed('/screenOne', arguments: [
+                'name' , 'Zain Ahmed'
+              ])      ;
+            },
+            child: const Text('Next Screen'),
+          ),
           Card(
             child: ListTile(
               title: const Text("GetX Dialog Alert"),
@@ -59,16 +71,16 @@ class _HomeScreenState extends State<HomeScreen> {
               onTap: () {
                 Get.bottomSheet(
                   Container(
-                   decoration: BoxDecoration(
-                     color: Theme.of(context).primaryColor,
-                     // color: Theme.of(context).colorScheme.inversePrimary,
-                     // color: Colors.teal,
-                     borderRadius: BorderRadius.circular(25),
-                   ),
+                    decoration: BoxDecoration(
+                      color: Theme.of(context).primaryColor,
+                      // color: Theme.of(context).colorScheme.inversePrimary,
+                      // color: Colors.teal,
+                      borderRadius: BorderRadius.circular(25),
+                    ),
                     child: Column(
                       children: [
                         ListTile(
-                          onTap: (){
+                          onTap: () {
                             Get.changeTheme(ThemeData.light());
                             Get.back();
                           },
@@ -76,7 +88,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           title: const Text('Light Theme'),
                         ),
                         ListTile(
-                          onTap: (){
+                          onTap: () {
                             Get.changeTheme(ThemeData.dark());
                             Get.back();
                           },
@@ -84,8 +96,10 @@ class _HomeScreenState extends State<HomeScreen> {
                           title: const Text('Dark Theme'),
                         ),
                         ListTile(
-                          onTap: (){
-                            Get.changeThemeMode(Get.isDarkMode ? ThemeMode.light : ThemeMode.dark);
+                          onTap: () {
+                            Get.changeThemeMode(Get.isDarkMode
+                                ? ThemeMode.light
+                                : ThemeMode.dark);
                             Get.back();
                           },
                           leading: const Icon(Icons.dark_mode),
@@ -96,7 +110,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 );
               },
-
             ),
           ),
         ],
