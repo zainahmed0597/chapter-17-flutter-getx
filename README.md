@@ -1,6 +1,6 @@
 # Flutter GetX State Management Chapter 17
 
-Flutter Getx Road Map and what we will learn in this playlist.
+Flutter GetX Road Map and what we will learn in this playlist.
 
 ## Getting Started
 
@@ -16,3 +16,14 @@ Flutter Getx Road Map and what we will learn in this playlist.
 * GetX Navigator & Routes (How to pass data between different screens)
 * Get height & Get width
 * GetX Localization Change the Language of the App i.g English, Urdu, Hindi
+
+## GetX State Management with Example
+
+* GetX Counter Example, i.e In this example we will create a simple counter app with GetX to increment the value of counter
+* GetX Example Two
+* GetX Example Three
+* Favourite App with GetX
+* GetX Image Picker
+* Login(Post,Put, Delete) Api With GetX
+* Get Api with GetX
+* Let's learn how to write clean code using MVVM with GETx and REST APIs
