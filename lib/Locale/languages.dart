@@ -1,4 +1,4 @@
-import 'package:get/get_navigation/src/root/internacionalization.dart';
+   import 'package:get/get_navigation/src/root/internacionalization.dart';
 
 class Languages extends Translations{
   @override
@@ -6,6 +6,10 @@ class Languages extends Translations{
     'en_US' : {
       'message' : 'What is your name',
       'name' : 'Zain Ahmed'
+    },
+    'ur_PK' : {
+      'message' : 'آپ کا نام کیا ہے',
+      'name' : 'زین احمد'
     }
   };
 }

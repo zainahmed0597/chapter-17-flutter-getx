@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'GetX',
-      // locale: Locale('en','US'),
+      locale: Locale('en','US'),
       translations: Languages(),
       fallbackLocale: Locale('en','US'),
       debugShowCheckedModeBanner: false,

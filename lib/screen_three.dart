@@ -17,6 +17,8 @@ class _ScreenThreeState extends State<ScreenThree> {
         centerTitle: true,
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
             height: Get.height * .1,
@@ -28,6 +30,23 @@ class _ScreenThreeState extends State<ScreenThree> {
           ),
           ListTile(
             title: Text('message'.tr),
+            subtitle: Text('name'.tr),
+          ),
+          const SizedBox(height: 50),
+          Row(
+            children: [
+              ElevatedButton(
+                  onPressed: () {
+                    Get.updateLocale(const Locale('en', 'US'));
+                  },
+                  child: const Text('English')),
+              const SizedBox(width: 20),
+              ElevatedButton(
+                  onPressed: () {
+                    Get.updateLocale(const Locale('ur', 'PK'));
+                  },
+                  child: const Text('Urdu')),
+            ],
           ),
         ],
       ),
