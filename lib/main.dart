@@ -1,4 +1,4 @@
-import 'package:chapter_17_flutter_getx/screen_two.dart';
+import 'package:chapter_17_flutter_getx/screen_three.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         // useMaterial3: true,
       ),
-      home: ScreenTwo(),
+      home: ScreenThree(),
     );
   }
 }
