@@ -17,3 +17,13 @@ class ExampleTwoController extends GetxController{
     opacity.value = value;
   }
 }
+
+// Example 3
+class ExampleThreeController extends GetxController{
+  RxBool notification = false.obs;
+
+  setNotification(bool value){
+    notification.value = value;
+    print(value);
+  }
+}
