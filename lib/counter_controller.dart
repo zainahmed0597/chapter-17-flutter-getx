@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:image_picker/image_picker.dart';
 
 // Example 1
 class CounterController extends GetxController {
@@ -53,5 +54,19 @@ class FavouriteController extends GetxController {
   removeToFavourite(String value) {
     tempFruitsList.remove(value);
     print(value);
+  }
+}
+
+// Example 5 Image picker
+class ImagePickerController extends GetxController{
+
+  RxString imagePath = ''.obs;
+  Future getImage() async {
+    final ImagePicker _picker = ImagePicker();
+    final image = await _picker.pickImage(source: ImageSource.camera);
+
+    if(image != null){
+      imagePath.value = image.path.toString();
+    }
   }
 }
