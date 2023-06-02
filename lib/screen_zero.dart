@@ -2,14 +2,14 @@ import 'package:chapter_17_flutter_getx/counter_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class ScreenZero extends StatefulWidget {
+  const ScreenZero({Key? key}) : super(key: key);
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<ScreenZero> createState() => _ScreenZeroState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _ScreenZeroState extends State<ScreenZero> {
   final CounterController controller = Get.put(CounterController());
 
   @override
